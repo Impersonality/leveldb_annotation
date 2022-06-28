@@ -5,7 +5,8 @@
 
 - [x] 2.通过filter_block查找时，如果filter_block为空时，content为nil，应该查不出东西
 
-- [ ] 3.leveldb如何保持插入时的有序呢，插入时不可能限制用户的操作    
+- [ ] 3.leveldb如何保持插入时的有序呢，memtable是skip_list，插入有序，sstable如何保持顺序呢
+    
 
 
 ###A

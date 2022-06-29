@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/leveldbutil.dir/db/leveldbutil.cc.o  -o leveldbutil  libleveldb.a 
+/usr/bin/c++  -g   CMakeFiles/leveldbutil.dir/db/leveldbutil.cc.o  -o leveldbutil  libleveldb.a -lpthread 

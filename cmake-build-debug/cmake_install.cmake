@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kg/Documents/cppCode/leveldb_annotation
+# Install script for directory: /home/kg/Code/cppCode/leveldb_annotation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -27,36 +27,37 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+endif()
+
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/libleveldb.a")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libleveldb.a" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libleveldb.a")
-    execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libleveldb.a")
-  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/libleveldb.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/leveldb" TYPE FILE FILES
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/c.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/cache.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/comparator.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/db.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/dumpfile.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/env.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/export.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/filter_policy.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/iterator.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/options.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/slice.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/status.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/table_builder.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/table.h"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/include/leveldb/write_batch.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/c.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/cache.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/comparator.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/db.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/dumpfile.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/env.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/export.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/filter_policy.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/iterator.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/options.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/slice.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/status.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/table_builder.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/table.h"
+    "/home/kg/Code/cppCode/leveldb_annotation/include/leveldb/write_batch.h"
     )
 endif()
 
@@ -64,7 +65,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/leveldb/leveldbTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/leveldb/leveldbTargets.cmake"
-         "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/Export/lib/cmake/leveldb/leveldbTargets.cmake")
+         "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/Export/lib/cmake/leveldb/leveldbTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/leveldb/leveldbTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -73,16 +74,16 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/leveldb" TYPE FILE FILES "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/Export/lib/cmake/leveldb/leveldbTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/leveldb" TYPE FILE FILES "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/Export/lib/cmake/leveldb/leveldbTargets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/leveldb" TYPE FILE FILES "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/Export/lib/cmake/leveldb/leveldbTargets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/leveldb" TYPE FILE FILES "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/Export/lib/cmake/leveldb/leveldbTargets-debug.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/leveldb" TYPE FILE FILES
-    "/Users/kg/Documents/cppCode/leveldb_annotation/cmake/leveldbConfig.cmake"
-    "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/leveldbConfigVersion.cmake"
+    "/home/kg/Code/cppCode/leveldb_annotation/cmake/leveldbConfig.cmake"
+    "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/leveldbConfigVersion.cmake"
     )
 endif()
 
@@ -94,5 +95,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

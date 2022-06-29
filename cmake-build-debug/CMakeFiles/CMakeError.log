@@ -1,102 +1,221 @@
 Determining if the function crc32c_value exists in the crc32c failed with the following output:
-Change Dir: /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_3fc0e/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_3fc0e.dir/build.make CMakeFiles/cmTC_3fc0e.dir/build
-Building C object CMakeFiles/cmTC_3fc0e.dir/CheckFunctionExists.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=crc32c_value -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -std=c11 -o CMakeFiles/cmTC_3fc0e.dir/CheckFunctionExists.c.o   -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_3fc0e
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3fc0e.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=crc32c_value -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_3fc0e.dir/CheckFunctionExists.c.o  -o cmTC_3fc0e  -lcrc32c 
-ld: library not found for -lcrc32c
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[1]: *** [cmTC_3fc0e] Error 1
-make: *** [cmTC_3fc0e/fast] Error 2
+Run Build Command(s):/usr/bin/make cmTC_dce37/fast && /usr/bin/make -f CMakeFiles/cmTC_dce37.dir/build.make CMakeFiles/cmTC_dce37.dir/build
+make[1]: 进入目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_dce37.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=crc32c_value   -std=c11 -o CMakeFiles/cmTC_dce37.dir/CheckFunctionExists.c.o   -c /home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_dce37
+/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dce37.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=crc32c_value    CMakeFiles/cmTC_dce37.dir/CheckFunctionExists.c.o  -o cmTC_dce37  -lcrc32c 
+/usr/bin/ld: 找不到 -lcrc32c
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_dce37.dir/build.make:87：cmTC_dce37] 错误 1
+make[1]: 离开目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_dce37/fast] 错误 2
 
 
 
 Determining if the function snappy_compress exists in the snappy failed with the following output:
-Change Dir: /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b6e86/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_b6e86.dir/build.make CMakeFiles/cmTC_b6e86.dir/build
-Building C object CMakeFiles/cmTC_b6e86.dir/CheckFunctionExists.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=snappy_compress -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -std=c11 -o CMakeFiles/cmTC_b6e86.dir/CheckFunctionExists.c.o   -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_b6e86
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6e86.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=snappy_compress -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_b6e86.dir/CheckFunctionExists.c.o  -o cmTC_b6e86  -lsnappy 
-ld: library not found for -lsnappy
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[1]: *** [cmTC_b6e86] Error 1
-make: *** [cmTC_b6e86/fast] Error 2
+Run Build Command(s):/usr/bin/make cmTC_0471e/fast && /usr/bin/make -f CMakeFiles/cmTC_0471e.dir/build.make CMakeFiles/cmTC_0471e.dir/build
+make[1]: 进入目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_0471e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=snappy_compress   -std=c11 -o CMakeFiles/cmTC_0471e.dir/CheckFunctionExists.c.o   -c /home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0471e
+/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0471e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=snappy_compress    CMakeFiles/cmTC_0471e.dir/CheckFunctionExists.c.o  -o cmTC_0471e  -lsnappy 
+/usr/bin/ld: 找不到 -lsnappy
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_0471e.dir/build.make:87：cmTC_0471e] 错误 1
+make[1]: 离开目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_0471e/fast] 错误 2
 
 
 
 Determining if the function malloc exists in the tcmalloc failed with the following output:
-Change Dir: /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_3dabf/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_3dabf.dir/build.make CMakeFiles/cmTC_3dabf.dir/build
-Building C object CMakeFiles/cmTC_3dabf.dir/CheckFunctionExists.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=malloc -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -std=c11 -o CMakeFiles/cmTC_3dabf.dir/CheckFunctionExists.c.o   -c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.16/Modules/CheckFunctionExists.c
-/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.16/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
-  CHECK_FUNCTION_EXISTS(void);
-  ^
-<command line>:1:31: note: expanded from here
-#define CHECK_FUNCTION_EXISTS malloc
-                              ^
-/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.16/Modules/CheckFunctionExists.c:7:3: note: 'malloc' is a builtin with type 'void *(unsigned long)'
-<command line>:1:31: note: expanded from here
-#define CHECK_FUNCTION_EXISTS malloc
-                              ^
-1 warning generated.
-Linking C executable cmTC_3dabf
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3dabf.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=malloc -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_3dabf.dir/CheckFunctionExists.c.o  -o cmTC_3dabf  -ltcmalloc 
-ld: library not found for -ltcmalloc
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[1]: *** [cmTC_3dabf] Error 1
-make: *** [cmTC_3dabf/fast] Error 2
+Run Build Command(s):/usr/bin/make cmTC_b7a1f/fast && /usr/bin/make -f CMakeFiles/cmTC_b7a1f.dir/build.make CMakeFiles/cmTC_b7a1f.dir/build
+make[1]: 进入目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_b7a1f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=malloc   -std=c11 -o CMakeFiles/cmTC_b7a1f.dir/CheckFunctionExists.c.o   -c /home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/share/cmake-3.16/Modules/CheckFunctionExists.c
+<command-line>: warning: conflicting types for built-in function ‘malloc’; expected ‘void *(long unsigned int)’ [-Wbuiltin-declaration-mismatch]
+/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/share/cmake-3.16/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/share/cmake-3.16/Modules/CheckFunctionExists.c:1:1: note: ‘malloc’ is declared in header ‘<stdlib.h>’
+  +++ |+#include <stdlib.h>
+    1 | #ifdef CHECK_FUNCTION_EXISTS
+Linking C executable cmTC_b7a1f
+/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7a1f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=malloc    CMakeFiles/cmTC_b7a1f.dir/CheckFunctionExists.c.o  -o cmTC_b7a1f  -ltcmalloc 
+/usr/bin/ld: 找不到 -ltcmalloc
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b7a1f.dir/build.make:87：cmTC_b7a1f] 错误 1
+make[1]: 离开目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_b7a1f/fast] 错误 2
 
 
 
-Determining if the fdatasync exist failed with the following output:
-Change Dir: /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
+Determining if the F_FULLFSYNC exist failed with the following output:
+Change Dir: /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_847b9/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_847b9.dir/build.make CMakeFiles/cmTC_847b9.dir/build
-Building CXX object CMakeFiles/cmTC_847b9.dir/CheckSymbolExists.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -std=c++11 -o CMakeFiles/cmTC_847b9.dir/CheckSymbolExists.cxx.o -c /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: use of undeclared identifier 'fdatasync'
-  return ((int*)(&fdatasync))[argc];
-                  ^
-1 error generated.
-make[1]: *** [CMakeFiles/cmTC_847b9.dir/CheckSymbolExists.cxx.o] Error 1
-make: *** [cmTC_847b9/fast] Error 2
+Run Build Command(s):/usr/bin/make cmTC_7dc76/fast && /usr/bin/make -f CMakeFiles/cmTC_7dc76.dir/build.make CMakeFiles/cmTC_7dc76.dir/build
+make[1]: 进入目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_7dc76.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_7dc76.dir/CheckSymbolExists.cxx.o -c /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘F_FULLFSYNC’ was not declared in this scope
+    8 |   return ((int*)(&F_FULLFSYNC))[argc];
+      |                   ^~~~~~~~~~~
+make[1]: *** [CMakeFiles/cmTC_7dc76.dir/build.make:66：CMakeFiles/cmTC_7dc76.dir/CheckSymbolExists.cxx.o] 错误 1
+make[1]: 离开目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_7dc76/fast] 错误 2
 
 
-File /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+File /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
-#include <unistd.h>
+#include <fcntl.h>
 
 int main(int argc, char** argv)
 {
   (void)argv;
-#ifndef fdatasync
-  return ((int*)(&fdatasync))[argc];
+#ifndef F_FULLFSYNC
+  return ((int*)(&F_FULLFSYNC))[argc];
 #else
   (void)argc;
   return 0;
 #endif
 }
-Performing C++ SOURCE FILE Test HAVE_KYOTOCABINET failed with the following output:
-Change Dir: /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
+Performing C++ SOURCE FILE Test HAVE_CLANG_THREAD_SAFETY failed with the following output:
+Change Dir: /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_0ab52/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_0ab52.dir/build.make CMakeFiles/cmTC_0ab52.dir/build
-Building CXX object CMakeFiles/cmTC_0ab52.dir/src.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -DHAVE_KYOTOCABINET -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -std=c++11 -o CMakeFiles/cmTC_0ab52.dir/src.cxx.o -c /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: 'kcpolydb.h' file not found
-#include <kcpolydb.h>
-         ^~~~~~~~~~~~
-1 error generated.
-make[1]: *** [CMakeFiles/cmTC_0ab52.dir/src.cxx.o] Error 1
-make: *** [cmTC_0ab52/fast] Error 2
+Run Build Command(s):/usr/bin/make cmTC_4d562/fast && /usr/bin/make -f CMakeFiles/cmTC_4d562.dir/build.make CMakeFiles/cmTC_4d562.dir/build
+make[1]: 进入目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_4d562.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_CLANG_THREAD_SAFETY -Werror   -std=c++11 -o CMakeFiles/cmTC_4d562.dir/src.cxx.o -c /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:2:34: error: ‘lockable’ attribute directive ignored [-Werror=attributes]
+    2 | struct __attribute__((lockable)) Lock {
+      |                                  ^~~~
+/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:3:59: error: ‘exclusive_lock_function’ attribute directive ignored [-Werror=attributes]
+    3 |   void Acquire() __attribute__((exclusive_lock_function()));
+      |                                                           ^
+/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:4:51: error: ‘unlock_function’ attribute directive ignored [-Werror=attributes]
+    4 |   void Release() __attribute__((unlock_function()));
+      |                                                   ^
+/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:8:46: error: ‘guarded_by’ attribute directive ignored [-Werror=attributes]
+    8 |   int data_ __attribute__((guarded_by(lock_)));
+      |                                              ^
+cc1plus: all warnings being treated as errors
+make[1]: *** [CMakeFiles/cmTC_4d562.dir/build.make:66：CMakeFiles/cmTC_4d562.dir/src.cxx.o] 错误 1
+make[1]: 离开目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_4d562/fast] 错误 2
+
+
+Source file was:
+
+struct __attribute__((lockable)) Lock {
+  void Acquire() __attribute__((exclusive_lock_function()));
+  void Release() __attribute__((unlock_function()));
+};
+struct ThreadSafeType {
+  Lock lock_;
+  int data_ __attribute__((guarded_by(lock_)));
+};
+int main() { return 0; }
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_03122/fast && /usr/bin/make -f CMakeFiles/cmTC_03122.dir/build.make CMakeFiles/cmTC_03122.dir/build
+make[1]: 进入目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_03122.dir/src.c.o
+/usr/bin/cc   -Wstrict-prototypes -DCMAKE_HAVE_LIBC_PTHREAD   -std=c11 -o CMakeFiles/cmTC_03122.dir/src.c.o   -c /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_03122
+/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03122.dir/link.txt --verbose=1
+/usr/bin/cc  -Wstrict-prototypes -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_03122.dir/src.c.o  -o cmTC_03122 
+/usr/bin/ld: CMakeFiles/cmTC_03122.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_03122.dir/build.make:87：cmTC_03122] 错误 1
+make[1]: 离开目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_03122/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5e9b6/fast && /usr/bin/make -f CMakeFiles/cmTC_5e9b6.dir/build.make CMakeFiles/cmTC_5e9b6.dir/build
+make[1]: 进入目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_5e9b6.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -Wstrict-prototypes -DCHECK_FUNCTION_EXISTS=pthread_create   -std=c11 -o CMakeFiles/cmTC_5e9b6.dir/CheckFunctionExists.c.o   -c /home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5e9b6
+/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e9b6.dir/link.txt --verbose=1
+/usr/bin/cc  -Wstrict-prototypes -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5e9b6.dir/CheckFunctionExists.c.o  -o cmTC_5e9b6  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5e9b6.dir/build.make:87：cmTC_5e9b6] 错误 1
+make[1]: 离开目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_5e9b6/fast] 错误 2
+
+
+
+Determining if the function sqlite3_open exists in the sqlite3 failed with the following output:
+Change Dir: /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5ed01/fast && /usr/bin/make -f CMakeFiles/cmTC_5ed01.dir/build.make CMakeFiles/cmTC_5ed01.dir/build
+make[1]: 进入目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_5ed01.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -Wstrict-prototypes -DCHECK_FUNCTION_EXISTS=sqlite3_open   -std=c11 -o CMakeFiles/cmTC_5ed01.dir/CheckFunctionExists.c.o   -c /home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5ed01
+/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ed01.dir/link.txt --verbose=1
+/usr/bin/cc  -Wstrict-prototypes -DCHECK_FUNCTION_EXISTS=sqlite3_open    CMakeFiles/cmTC_5ed01.dir/CheckFunctionExists.c.o  -o cmTC_5ed01  -lsqlite3 
+/usr/bin/ld: 找不到 -lsqlite3
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5ed01.dir/build.make:87：cmTC_5ed01] 错误 1
+make[1]: 离开目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_5ed01/fast] 错误 2
+
+
+
+Performing C++ SOURCE FILE Test HAVE_KYOTOCABINET failed with the following output:
+Change Dir: /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5ca7a/fast && /usr/bin/make -f CMakeFiles/cmTC_5ca7a.dir/build.make CMakeFiles/cmTC_5ca7a.dir/build
+make[1]: 进入目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_5ca7a.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_KYOTOCABINET   -std=c++11 -o CMakeFiles/cmTC_5ca7a.dir/src.cxx.o -c /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: kcpolydb.h: 没有那个文件或目录
+    2 | #include <kcpolydb.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_5ca7a.dir/build.make:66：CMakeFiles/cmTC_5ca7a.dir/src.cxx.o] 错误 1
+make[1]: 离开目录“/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_5ca7a/fast] 错误 2
 
 
 Source file was:

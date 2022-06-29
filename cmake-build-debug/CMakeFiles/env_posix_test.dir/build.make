@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kg/Documents/cppCode/leveldb_annotation
+CMAKE_SOURCE_DIR = /home/kg/Code/cppCode/leveldb_annotation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/env_posix_test.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/env_posix_test.dir/flags.make
 
 CMakeFiles/env_posix_test.dir/util/testharness.cc.o: CMakeFiles/env_posix_test.dir/flags.make
 CMakeFiles/env_posix_test.dir/util/testharness.cc.o: ../util/testharness.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/env_posix_test.dir/util/testharness.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/env_posix_test.dir/util/testharness.cc.o -c /Users/kg/Documents/cppCode/leveldb_annotation/util/testharness.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/env_posix_test.dir/util/testharness.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/env_posix_test.dir/util/testharness.cc.o -c /home/kg/Code/cppCode/leveldb_annotation/util/testharness.cc
 
 CMakeFiles/env_posix_test.dir/util/testharness.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/env_posix_test.dir/util/testharness.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kg/Documents/cppCode/leveldb_annotation/util/testharness.cc > CMakeFiles/env_posix_test.dir/util/testharness.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kg/Code/cppCode/leveldb_annotation/util/testharness.cc > CMakeFiles/env_posix_test.dir/util/testharness.cc.i
 
 CMakeFiles/env_posix_test.dir/util/testharness.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/env_posix_test.dir/util/testharness.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kg/Documents/cppCode/leveldb_annotation/util/testharness.cc -o CMakeFiles/env_posix_test.dir/util/testharness.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kg/Code/cppCode/leveldb_annotation/util/testharness.cc -o CMakeFiles/env_posix_test.dir/util/testharness.cc.s
 
 CMakeFiles/env_posix_test.dir/util/testutil.cc.o: CMakeFiles/env_posix_test.dir/flags.make
 CMakeFiles/env_posix_test.dir/util/testutil.cc.o: ../util/testutil.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/env_posix_test.dir/util/testutil.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/env_posix_test.dir/util/testutil.cc.o -c /Users/kg/Documents/cppCode/leveldb_annotation/util/testutil.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/env_posix_test.dir/util/testutil.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/env_posix_test.dir/util/testutil.cc.o -c /home/kg/Code/cppCode/leveldb_annotation/util/testutil.cc
 
 CMakeFiles/env_posix_test.dir/util/testutil.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/env_posix_test.dir/util/testutil.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kg/Documents/cppCode/leveldb_annotation/util/testutil.cc > CMakeFiles/env_posix_test.dir/util/testutil.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kg/Code/cppCode/leveldb_annotation/util/testutil.cc > CMakeFiles/env_posix_test.dir/util/testutil.cc.i
 
 CMakeFiles/env_posix_test.dir/util/testutil.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/env_posix_test.dir/util/testutil.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kg/Documents/cppCode/leveldb_annotation/util/testutil.cc -o CMakeFiles/env_posix_test.dir/util/testutil.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kg/Code/cppCode/leveldb_annotation/util/testutil.cc -o CMakeFiles/env_posix_test.dir/util/testutil.cc.s
 
 CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.o: CMakeFiles/env_posix_test.dir/flags.make
 CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.o: ../util/env_posix_test.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.o -c /Users/kg/Documents/cppCode/leveldb_annotation/util/env_posix_test.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.o -c /home/kg/Code/cppCode/leveldb_annotation/util/env_posix_test.cc
 
 CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kg/Documents/cppCode/leveldb_annotation/util/env_posix_test.cc > CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kg/Code/cppCode/leveldb_annotation/util/env_posix_test.cc > CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.i
 
 CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kg/Documents/cppCode/leveldb_annotation/util/env_posix_test.cc -o CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kg/Code/cppCode/leveldb_annotation/util/env_posix_test.cc -o CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.s
 
 # Object files for target env_posix_test
 env_posix_test_OBJECTS = \
@@ -111,7 +111,7 @@ env_posix_test: CMakeFiles/env_posix_test.dir/util/env_posix_test.cc.o
 env_posix_test: CMakeFiles/env_posix_test.dir/build.make
 env_posix_test: libleveldb.a
 env_posix_test: CMakeFiles/env_posix_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable env_posix_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable env_posix_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/env_posix_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/env_posix_test.dir/clean:
 .PHONY : CMakeFiles/env_posix_test.dir/clean
 
 CMakeFiles/env_posix_test.dir/depend:
-	cd /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kg/Documents/cppCode/leveldb_annotation /Users/kg/Documents/cppCode/leveldb_annotation /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/env_posix_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kg/Code/cppCode/leveldb_annotation /home/kg/Code/cppCode/leveldb_annotation /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/env_posix_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/env_posix_test.dir/depend
 

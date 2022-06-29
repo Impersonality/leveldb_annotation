@@ -5,9 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/kg/Documents/cppCode/leveldb_annotation/db/c_test.c" "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/c_test.dir/db/c_test.c.o"
+  "/home/kg/Code/cppCode/leveldb_annotation/db/c_test.c" "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/c_test.dir/db/c_test.c.o"
   )
-set(CMAKE_C_COMPILER_ID "AppleClang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
@@ -21,10 +21,10 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/kg/Documents/cppCode/leveldb_annotation/util/testharness.cc" "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/c_test.dir/util/testharness.cc.o"
-  "/Users/kg/Documents/cppCode/leveldb_annotation/util/testutil.cc" "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/c_test.dir/util/testutil.cc.o"
+  "/home/kg/Code/cppCode/leveldb_annotation/util/testharness.cc" "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/c_test.dir/util/testharness.cc.o"
+  "/home/kg/Code/cppCode/leveldb_annotation/util/testutil.cc" "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/c_test.dir/util/testutil.cc.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
@@ -40,7 +40,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/leveldb.dir/DependInfo.cmake"
+  "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/leveldb.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

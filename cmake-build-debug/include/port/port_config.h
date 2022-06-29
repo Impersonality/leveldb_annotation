@@ -7,12 +7,12 @@
 
 // Define to 1 if you have a definition for fdatasync() in <unistd.h>.
 #if !defined(HAVE_FDATASYNC)
-#define HAVE_FDATASYNC 0
+#define HAVE_FDATASYNC 1
 #endif  // !defined(HAVE_FDATASYNC)
 
 // Define to 1 if you have a definition for F_FULLFSYNC in <fcntl.h>.
 #if !defined(HAVE_FULLFSYNC)
-#define HAVE_FULLFSYNC 1
+#define HAVE_FULLFSYNC 0
 #endif  // !defined(HAVE_FULLFSYNC)
 
 // Define to 1 if you have a definition for O_CLOEXEC in <fcntl.h>.

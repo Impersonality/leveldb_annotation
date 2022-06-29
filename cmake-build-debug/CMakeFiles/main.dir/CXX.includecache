@@ -56,9 +56,9 @@ leveldb/export.h
 leveldb/slice.h
 ../include/leveldb/leveldb/slice.h
 
-/Users/kg/Documents/cppCode/leveldb_annotation/app/main.cpp
+/home/kg/Code/cppCode/leveldb_annotation/app/main.cpp
 iostream
 -
 leveldb/db.h
-/Users/kg/Documents/cppCode/leveldb_annotation/app/leveldb/db.h
+/home/kg/Code/cppCode/leveldb_annotation/app/leveldb/db.h
 

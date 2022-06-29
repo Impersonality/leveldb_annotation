@@ -39,51 +39,51 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kg/Documents/cppCode/leveldb_annotation
+CMAKE_SOURCE_DIR = /home/kg/Code/cppCode/leveldb_annotation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+	/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+	/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -94,24 +94,13 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -123,23 +112,34 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/home/kg/Softwares/clion/clion-2020.1.3/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -194,30 +194,43 @@ env_posix_test/fast:
 .PHONY : env_posix_test/fast
 
 #=============================================================================
-# Target rules for targets named db_bench_sqlite3
+# Target rules for targets named logging_test
 
 # Build rule for target.
-db_bench_sqlite3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 db_bench_sqlite3
-.PHONY : db_bench_sqlite3
+logging_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 logging_test
+.PHONY : logging_test
 
 # fast build rule for target.
-db_bench_sqlite3/fast:
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/build
-.PHONY : db_bench_sqlite3/fast
+logging_test/fast:
+	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/build
+.PHONY : logging_test/fast
 
 #=============================================================================
-# Target rules for targets named cache_test
+# Target rules for targets named hash_test
 
 # Build rule for target.
-cache_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cache_test
-.PHONY : cache_test
+hash_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hash_test
+.PHONY : hash_test
 
 # fast build rule for target.
-cache_test/fast:
-	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/build
-.PHONY : cache_test/fast
+hash_test/fast:
+	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/build
+.PHONY : hash_test/fast
+
+#=============================================================================
+# Target rules for targets named coding_test
+
+# Build rule for target.
+coding_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 coding_test
+.PHONY : coding_test
+
+# fast build rule for target.
+coding_test/fast:
+	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/build
+.PHONY : coding_test/fast
 
 #=============================================================================
 # Target rules for targets named bloom_test
@@ -246,30 +259,17 @@ arena_test/fast:
 .PHONY : arena_test/fast
 
 #=============================================================================
-# Target rules for targets named logging_test
+# Target rules for targets named no_destructor_test
 
 # Build rule for target.
-logging_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 logging_test
-.PHONY : logging_test
+no_destructor_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 no_destructor_test
+.PHONY : no_destructor_test
 
 # fast build rule for target.
-logging_test/fast:
-	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/build
-.PHONY : logging_test/fast
-
-#=============================================================================
-# Target rules for targets named table_test
-
-# Build rule for target.
-table_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 table_test
-.PHONY : table_test
-
-# fast build rule for target.
-table_test/fast:
-	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/build
-.PHONY : table_test/fast
+no_destructor_test/fast:
+	$(MAKE) -f CMakeFiles/no_destructor_test.dir/build.make CMakeFiles/no_destructor_test.dir/build
+.PHONY : no_destructor_test/fast
 
 #=============================================================================
 # Target rules for targets named filter_block_test
@@ -285,134 +285,17 @@ filter_block_test/fast:
 .PHONY : filter_block_test/fast
 
 #=============================================================================
-# Target rules for targets named memenv_test
+# Target rules for targets named corruption_test
 
 # Build rule for target.
-memenv_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 memenv_test
-.PHONY : memenv_test
+corruption_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 corruption_test
+.PHONY : corruption_test
 
 # fast build rule for target.
-memenv_test/fast:
-	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/build
-.PHONY : memenv_test/fast
-
-#=============================================================================
-# Target rules for targets named write_batch_test
-
-# Build rule for target.
-write_batch_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 write_batch_test
-.PHONY : write_batch_test
-
-# fast build rule for target.
-write_batch_test/fast:
-	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/build
-.PHONY : write_batch_test/fast
-
-#=============================================================================
-# Target rules for targets named skiplist_test
-
-# Build rule for target.
-skiplist_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 skiplist_test
-.PHONY : skiplist_test
-
-# fast build rule for target.
-skiplist_test/fast:
-	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/build
-.PHONY : skiplist_test/fast
-
-#=============================================================================
-# Target rules for targets named issue200_test
-
-# Build rule for target.
-issue200_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 issue200_test
-.PHONY : issue200_test
-
-# fast build rule for target.
-issue200_test/fast:
-	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/build
-.PHONY : issue200_test/fast
-
-#=============================================================================
-# Target rules for targets named filename_test
-
-# Build rule for target.
-filename_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 filename_test
-.PHONY : filename_test
-
-# fast build rule for target.
-filename_test/fast:
-	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/build
-.PHONY : filename_test/fast
-
-#=============================================================================
-# Target rules for targets named recovery_test
-
-# Build rule for target.
-recovery_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 recovery_test
-.PHONY : recovery_test
-
-# fast build rule for target.
-recovery_test/fast:
-	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/build
-.PHONY : recovery_test/fast
-
-#=============================================================================
-# Target rules for targets named version_edit_test
-
-# Build rule for target.
-version_edit_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 version_edit_test
-.PHONY : version_edit_test
-
-# fast build rule for target.
-version_edit_test/fast:
-	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/build
-.PHONY : version_edit_test/fast
-
-#=============================================================================
-# Target rules for targets named log_test
-
-# Build rule for target.
-log_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 log_test
-.PHONY : log_test
-
-# fast build rule for target.
-log_test/fast:
-	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/build
-.PHONY : log_test/fast
-
-#=============================================================================
-# Target rules for targets named dbformat_test
-
-# Build rule for target.
-dbformat_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dbformat_test
-.PHONY : dbformat_test
-
-# fast build rule for target.
-dbformat_test/fast:
-	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/build
-.PHONY : dbformat_test/fast
-
-#=============================================================================
-# Target rules for targets named issue178_test
-
-# Build rule for target.
-issue178_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 issue178_test
-.PHONY : issue178_test
-
-# fast build rule for target.
-issue178_test/fast:
-	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/build
-.PHONY : issue178_test/fast
+corruption_test/fast:
+	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/build
+.PHONY : corruption_test/fast
 
 #=============================================================================
 # Target rules for targets named env_test
@@ -428,108 +311,17 @@ env_test/fast:
 .PHONY : env_test/fast
 
 #=============================================================================
-# Target rules for targets named db_test
+# Target rules for targets named status_test
 
 # Build rule for target.
-db_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 db_test
-.PHONY : db_test
+status_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 status_test
+.PHONY : status_test
 
 # fast build rule for target.
-db_test/fast:
-	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/build
-.PHONY : db_test/fast
-
-#=============================================================================
-# Target rules for targets named corruption_test
-
-# Build rule for target.
-corruption_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 corruption_test
-.PHONY : corruption_test
-
-# fast build rule for target.
-corruption_test/fast:
-	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/build
-.PHONY : corruption_test/fast
-
-#=============================================================================
-# Target rules for targets named autocompact_test
-
-# Build rule for target.
-autocompact_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 autocompact_test
-.PHONY : autocompact_test
-
-# fast build rule for target.
-autocompact_test/fast:
-	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/build
-.PHONY : autocompact_test/fast
-
-#=============================================================================
-# Target rules for targets named coding_test
-
-# Build rule for target.
-coding_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 coding_test
-.PHONY : coding_test
-
-# fast build rule for target.
-coding_test/fast:
-	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/build
-.PHONY : coding_test/fast
-
-#=============================================================================
-# Target rules for targets named no_destructor_test
-
-# Build rule for target.
-no_destructor_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 no_destructor_test
-.PHONY : no_destructor_test
-
-# fast build rule for target.
-no_destructor_test/fast:
-	$(MAKE) -f CMakeFiles/no_destructor_test.dir/build.make CMakeFiles/no_destructor_test.dir/build
-.PHONY : no_destructor_test/fast
-
-#=============================================================================
-# Target rules for targets named version_set_test
-
-# Build rule for target.
-version_set_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 version_set_test
-.PHONY : version_set_test
-
-# fast build rule for target.
-version_set_test/fast:
-	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/build
-.PHONY : version_set_test/fast
-
-#=============================================================================
-# Target rules for targets named issue320_test
-
-# Build rule for target.
-issue320_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 issue320_test
-.PHONY : issue320_test
-
-# fast build rule for target.
-issue320_test/fast:
-	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/build
-.PHONY : issue320_test/fast
-
-#=============================================================================
-# Target rules for targets named hash_test
-
-# Build rule for target.
-hash_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hash_test
-.PHONY : hash_test
-
-# fast build rule for target.
-hash_test/fast:
-	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/build
-.PHONY : hash_test/fast
+status_test/fast:
+	$(MAKE) -f CMakeFiles/status_test.dir/build.make CMakeFiles/status_test.dir/build
+.PHONY : status_test/fast
 
 #=============================================================================
 # Target rules for targets named main
@@ -545,30 +337,69 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named status_test
+# Target rules for targets named issue320_test
 
 # Build rule for target.
-status_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 status_test
-.PHONY : status_test
+issue320_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 issue320_test
+.PHONY : issue320_test
 
 # fast build rule for target.
-status_test/fast:
-	$(MAKE) -f CMakeFiles/status_test.dir/build.make CMakeFiles/status_test.dir/build
-.PHONY : status_test/fast
+issue320_test/fast:
+	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/build
+.PHONY : issue320_test/fast
 
 #=============================================================================
-# Target rules for targets named fault_injection_test
+# Target rules for targets named leveldb
 
 # Build rule for target.
-fault_injection_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fault_injection_test
-.PHONY : fault_injection_test
+leveldb: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 leveldb
+.PHONY : leveldb
 
 # fast build rule for target.
-fault_injection_test/fast:
-	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/build
-.PHONY : fault_injection_test/fast
+leveldb/fast:
+	$(MAKE) -f CMakeFiles/leveldb.dir/build.make CMakeFiles/leveldb.dir/build
+.PHONY : leveldb/fast
+
+#=============================================================================
+# Target rules for targets named issue200_test
+
+# Build rule for target.
+issue200_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 issue200_test
+.PHONY : issue200_test
+
+# fast build rule for target.
+issue200_test/fast:
+	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/build
+.PHONY : issue200_test/fast
+
+#=============================================================================
+# Target rules for targets named autocompact_test
+
+# Build rule for target.
+autocompact_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 autocompact_test
+.PHONY : autocompact_test
+
+# fast build rule for target.
+autocompact_test/fast:
+	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/build
+.PHONY : autocompact_test/fast
+
+#=============================================================================
+# Target rules for targets named db_test
+
+# Build rule for target.
+db_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 db_test
+.PHONY : db_test
+
+# fast build rule for target.
+db_test/fast:
+	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/build
+.PHONY : db_test/fast
 
 #=============================================================================
 # Target rules for targets named c_test
@@ -584,17 +415,17 @@ c_test/fast:
 .PHONY : c_test/fast
 
 #=============================================================================
-# Target rules for targets named crc32c_test
+# Target rules for targets named issue178_test
 
 # Build rule for target.
-crc32c_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 crc32c_test
-.PHONY : crc32c_test
+issue178_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 issue178_test
+.PHONY : issue178_test
 
 # fast build rule for target.
-crc32c_test/fast:
-	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/build
-.PHONY : crc32c_test/fast
+issue178_test/fast:
+	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/build
+.PHONY : issue178_test/fast
 
 #=============================================================================
 # Target rules for targets named leveldbutil
@@ -610,17 +441,173 @@ leveldbutil/fast:
 .PHONY : leveldbutil/fast
 
 #=============================================================================
-# Target rules for targets named leveldb
+# Target rules for targets named write_batch_test
 
 # Build rule for target.
-leveldb: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 leveldb
-.PHONY : leveldb
+write_batch_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 write_batch_test
+.PHONY : write_batch_test
 
 # fast build rule for target.
-leveldb/fast:
-	$(MAKE) -f CMakeFiles/leveldb.dir/build.make CMakeFiles/leveldb.dir/build
-.PHONY : leveldb/fast
+write_batch_test/fast:
+	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/build
+.PHONY : write_batch_test/fast
+
+#=============================================================================
+# Target rules for targets named memenv_test
+
+# Build rule for target.
+memenv_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 memenv_test
+.PHONY : memenv_test
+
+# fast build rule for target.
+memenv_test/fast:
+	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/build
+.PHONY : memenv_test/fast
+
+#=============================================================================
+# Target rules for targets named dbformat_test
+
+# Build rule for target.
+dbformat_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dbformat_test
+.PHONY : dbformat_test
+
+# fast build rule for target.
+dbformat_test/fast:
+	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/build
+.PHONY : dbformat_test/fast
+
+#=============================================================================
+# Target rules for targets named fault_injection_test
+
+# Build rule for target.
+fault_injection_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fault_injection_test
+.PHONY : fault_injection_test
+
+# fast build rule for target.
+fault_injection_test/fast:
+	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/build
+.PHONY : fault_injection_test/fast
+
+#=============================================================================
+# Target rules for targets named filename_test
+
+# Build rule for target.
+filename_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 filename_test
+.PHONY : filename_test
+
+# fast build rule for target.
+filename_test/fast:
+	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/build
+.PHONY : filename_test/fast
+
+#=============================================================================
+# Target rules for targets named table_test
+
+# Build rule for target.
+table_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 table_test
+.PHONY : table_test
+
+# fast build rule for target.
+table_test/fast:
+	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/build
+.PHONY : table_test/fast
+
+#=============================================================================
+# Target rules for targets named log_test
+
+# Build rule for target.
+log_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 log_test
+.PHONY : log_test
+
+# fast build rule for target.
+log_test/fast:
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/build
+.PHONY : log_test/fast
+
+#=============================================================================
+# Target rules for targets named recovery_test
+
+# Build rule for target.
+recovery_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 recovery_test
+.PHONY : recovery_test
+
+# fast build rule for target.
+recovery_test/fast:
+	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/build
+.PHONY : recovery_test/fast
+
+#=============================================================================
+# Target rules for targets named version_set_test
+
+# Build rule for target.
+version_set_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 version_set_test
+.PHONY : version_set_test
+
+# fast build rule for target.
+version_set_test/fast:
+	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/build
+.PHONY : version_set_test/fast
+
+#=============================================================================
+# Target rules for targets named crc32c_test
+
+# Build rule for target.
+crc32c_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 crc32c_test
+.PHONY : crc32c_test
+
+# fast build rule for target.
+crc32c_test/fast:
+	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/build
+.PHONY : crc32c_test/fast
+
+#=============================================================================
+# Target rules for targets named cache_test
+
+# Build rule for target.
+cache_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cache_test
+.PHONY : cache_test
+
+# fast build rule for target.
+cache_test/fast:
+	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/build
+.PHONY : cache_test/fast
+
+#=============================================================================
+# Target rules for targets named skiplist_test
+
+# Build rule for target.
+skiplist_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 skiplist_test
+.PHONY : skiplist_test
+
+# fast build rule for target.
+skiplist_test/fast:
+	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/build
+.PHONY : skiplist_test/fast
+
+#=============================================================================
+# Target rules for targets named version_edit_test
+
+# Build rule for target.
+version_edit_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 version_edit_test
+.PHONY : version_edit_test
+
+# fast build rule for target.
+version_edit_test/fast:
+	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/build
+.PHONY : version_edit_test/fast
 
 app/main.o: app/main.cpp.o
 
@@ -675,33 +662,6 @@ benchmarks/db_bench.s: benchmarks/db_bench.cc.s
 benchmarks/db_bench.cc.s:
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/benchmarks/db_bench.cc.s
 .PHONY : benchmarks/db_bench.cc.s
-
-benchmarks/db_bench_sqlite3.o: benchmarks/db_bench_sqlite3.cc.o
-
-.PHONY : benchmarks/db_bench_sqlite3.o
-
-# target to build an object file
-benchmarks/db_bench_sqlite3.cc.o:
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/benchmarks/db_bench_sqlite3.cc.o
-.PHONY : benchmarks/db_bench_sqlite3.cc.o
-
-benchmarks/db_bench_sqlite3.i: benchmarks/db_bench_sqlite3.cc.i
-
-.PHONY : benchmarks/db_bench_sqlite3.i
-
-# target to preprocess a source file
-benchmarks/db_bench_sqlite3.cc.i:
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/benchmarks/db_bench_sqlite3.cc.i
-.PHONY : benchmarks/db_bench_sqlite3.cc.i
-
-benchmarks/db_bench_sqlite3.s: benchmarks/db_bench_sqlite3.cc.s
-
-.PHONY : benchmarks/db_bench_sqlite3.s
-
-# target to generate assembly for a file
-benchmarks/db_bench_sqlite3.cc.s:
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/benchmarks/db_bench_sqlite3.cc.s
-.PHONY : benchmarks/db_bench_sqlite3.cc.s
 
 db/autocompact_test.o: db/autocompact_test.cc.o
 
@@ -2411,7 +2371,6 @@ util/histogram.o: util/histogram.cc.o
 # target to build an object file
 util/histogram.cc.o:
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/util/histogram.cc.o
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/util/histogram.cc.o
 .PHONY : util/histogram.cc.o
 
 util/histogram.i: util/histogram.cc.i
@@ -2421,7 +2380,6 @@ util/histogram.i: util/histogram.cc.i
 # target to preprocess a source file
 util/histogram.cc.i:
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/util/histogram.cc.i
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/util/histogram.cc.i
 .PHONY : util/histogram.cc.i
 
 util/histogram.s: util/histogram.cc.s
@@ -2431,7 +2389,6 @@ util/histogram.s: util/histogram.cc.s
 # target to generate assembly for a file
 util/histogram.cc.s:
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/util/histogram.cc.s
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/util/histogram.cc.s
 .PHONY : util/histogram.cc.s
 
 util/logging.o: util/logging.cc.o
@@ -2604,37 +2561,36 @@ util/testharness.o: util/testharness.cc.o
 util/testharness.cc.o:
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/util/testharness.cc.o
 	$(MAKE) -f CMakeFiles/env_posix_test.dir/build.make CMakeFiles/env_posix_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testharness.cc.o
 	$(MAKE) -f CMakeFiles/bloom_test.dir/build.make CMakeFiles/bloom_test.dir/util/testharness.cc.o
 	$(MAKE) -f CMakeFiles/arena_test.dir/build.make CMakeFiles/arena_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testharness.cc.o
 	$(MAKE) -f CMakeFiles/no_destructor_test.dir/build.make CMakeFiles/no_destructor_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testharness.cc.o
 	$(MAKE) -f CMakeFiles/status_test.dir/build.make CMakeFiles/status_test.dir/util/testharness.cc.o
-	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testharness.cc.o
 	$(MAKE) -f CMakeFiles/c_test.dir/build.make CMakeFiles/c_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testharness.cc.o
 	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testharness.cc.o
+	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testharness.cc.o
 .PHONY : util/testharness.cc.o
 
 util/testharness.i: util/testharness.cc.i
@@ -2645,37 +2601,36 @@ util/testharness.i: util/testharness.cc.i
 util/testharness.cc.i:
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/util/testharness.cc.i
 	$(MAKE) -f CMakeFiles/env_posix_test.dir/build.make CMakeFiles/env_posix_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testharness.cc.i
 	$(MAKE) -f CMakeFiles/bloom_test.dir/build.make CMakeFiles/bloom_test.dir/util/testharness.cc.i
 	$(MAKE) -f CMakeFiles/arena_test.dir/build.make CMakeFiles/arena_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testharness.cc.i
 	$(MAKE) -f CMakeFiles/no_destructor_test.dir/build.make CMakeFiles/no_destructor_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testharness.cc.i
 	$(MAKE) -f CMakeFiles/status_test.dir/build.make CMakeFiles/status_test.dir/util/testharness.cc.i
-	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testharness.cc.i
 	$(MAKE) -f CMakeFiles/c_test.dir/build.make CMakeFiles/c_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testharness.cc.i
 	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testharness.cc.i
+	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testharness.cc.i
 .PHONY : util/testharness.cc.i
 
 util/testharness.s: util/testharness.cc.s
@@ -2686,37 +2641,36 @@ util/testharness.s: util/testharness.cc.s
 util/testharness.cc.s:
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/util/testharness.cc.s
 	$(MAKE) -f CMakeFiles/env_posix_test.dir/build.make CMakeFiles/env_posix_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testharness.cc.s
 	$(MAKE) -f CMakeFiles/bloom_test.dir/build.make CMakeFiles/bloom_test.dir/util/testharness.cc.s
 	$(MAKE) -f CMakeFiles/arena_test.dir/build.make CMakeFiles/arena_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testharness.cc.s
 	$(MAKE) -f CMakeFiles/no_destructor_test.dir/build.make CMakeFiles/no_destructor_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testharness.cc.s
 	$(MAKE) -f CMakeFiles/status_test.dir/build.make CMakeFiles/status_test.dir/util/testharness.cc.s
-	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testharness.cc.s
 	$(MAKE) -f CMakeFiles/c_test.dir/build.make CMakeFiles/c_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testharness.cc.s
 	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testharness.cc.s
+	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testharness.cc.s
 .PHONY : util/testharness.cc.s
 
 util/testutil.o: util/testutil.cc.o
@@ -2727,37 +2681,36 @@ util/testutil.o: util/testutil.cc.o
 util/testutil.cc.o:
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/util/testutil.cc.o
 	$(MAKE) -f CMakeFiles/env_posix_test.dir/build.make CMakeFiles/env_posix_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testutil.cc.o
 	$(MAKE) -f CMakeFiles/bloom_test.dir/build.make CMakeFiles/bloom_test.dir/util/testutil.cc.o
 	$(MAKE) -f CMakeFiles/arena_test.dir/build.make CMakeFiles/arena_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testutil.cc.o
 	$(MAKE) -f CMakeFiles/no_destructor_test.dir/build.make CMakeFiles/no_destructor_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testutil.cc.o
 	$(MAKE) -f CMakeFiles/status_test.dir/build.make CMakeFiles/status_test.dir/util/testutil.cc.o
-	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testutil.cc.o
 	$(MAKE) -f CMakeFiles/c_test.dir/build.make CMakeFiles/c_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testutil.cc.o
 	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testutil.cc.o
+	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testutil.cc.o
 .PHONY : util/testutil.cc.o
 
 util/testutil.i: util/testutil.cc.i
@@ -2768,37 +2721,36 @@ util/testutil.i: util/testutil.cc.i
 util/testutil.cc.i:
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/util/testutil.cc.i
 	$(MAKE) -f CMakeFiles/env_posix_test.dir/build.make CMakeFiles/env_posix_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testutil.cc.i
 	$(MAKE) -f CMakeFiles/bloom_test.dir/build.make CMakeFiles/bloom_test.dir/util/testutil.cc.i
 	$(MAKE) -f CMakeFiles/arena_test.dir/build.make CMakeFiles/arena_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testutil.cc.i
 	$(MAKE) -f CMakeFiles/no_destructor_test.dir/build.make CMakeFiles/no_destructor_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testutil.cc.i
 	$(MAKE) -f CMakeFiles/status_test.dir/build.make CMakeFiles/status_test.dir/util/testutil.cc.i
-	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testutil.cc.i
 	$(MAKE) -f CMakeFiles/c_test.dir/build.make CMakeFiles/c_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testutil.cc.i
 	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testutil.cc.i
+	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testutil.cc.i
 .PHONY : util/testutil.cc.i
 
 util/testutil.s: util/testutil.cc.s
@@ -2809,37 +2761,36 @@ util/testutil.s: util/testutil.cc.s
 util/testutil.cc.s:
 	$(MAKE) -f CMakeFiles/db_bench.dir/build.make CMakeFiles/db_bench.dir/util/testutil.cc.s
 	$(MAKE) -f CMakeFiles/env_posix_test.dir/build.make CMakeFiles/env_posix_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/db_bench_sqlite3.dir/build.make CMakeFiles/db_bench_sqlite3.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testutil.cc.s
 	$(MAKE) -f CMakeFiles/bloom_test.dir/build.make CMakeFiles/bloom_test.dir/util/testutil.cc.s
 	$(MAKE) -f CMakeFiles/arena_test.dir/build.make CMakeFiles/arena_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/logging_test.dir/build.make CMakeFiles/logging_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/coding_test.dir/build.make CMakeFiles/coding_test.dir/util/testutil.cc.s
 	$(MAKE) -f CMakeFiles/no_destructor_test.dir/build.make CMakeFiles/no_destructor_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/hash_test.dir/build.make CMakeFiles/hash_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/filter_block_test.dir/build.make CMakeFiles/filter_block_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/corruption_test.dir/build.make CMakeFiles/corruption_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/util/testutil.cc.s
 	$(MAKE) -f CMakeFiles/status_test.dir/build.make CMakeFiles/status_test.dir/util/testutil.cc.s
-	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/issue320_test.dir/build.make CMakeFiles/issue320_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/issue200_test.dir/build.make CMakeFiles/issue200_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/autocompact_test.dir/build.make CMakeFiles/autocompact_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/db_test.dir/build.make CMakeFiles/db_test.dir/util/testutil.cc.s
 	$(MAKE) -f CMakeFiles/c_test.dir/build.make CMakeFiles/c_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/issue178_test.dir/build.make CMakeFiles/issue178_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/write_batch_test.dir/build.make CMakeFiles/write_batch_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/memenv_test.dir/build.make CMakeFiles/memenv_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/dbformat_test.dir/build.make CMakeFiles/dbformat_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/fault_injection_test.dir/build.make CMakeFiles/fault_injection_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/filename_test.dir/build.make CMakeFiles/filename_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/table_test.dir/build.make CMakeFiles/table_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/recovery_test.dir/build.make CMakeFiles/recovery_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/version_set_test.dir/build.make CMakeFiles/version_set_test.dir/util/testutil.cc.s
 	$(MAKE) -f CMakeFiles/crc32c_test.dir/build.make CMakeFiles/crc32c_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/cache_test.dir/build.make CMakeFiles/cache_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/skiplist_test.dir/build.make CMakeFiles/skiplist_test.dir/util/testutil.cc.s
+	$(MAKE) -f CMakeFiles/version_edit_test.dir/build.make CMakeFiles/version_edit_test.dir/util/testutil.cc.s
 .PHONY : util/testutil.cc.s
 
 # Help Target
@@ -2848,57 +2799,53 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
 	@echo "... db_bench"
 	@echo "... env_posix_test"
-	@echo "... db_bench_sqlite3"
-	@echo "... cache_test"
+	@echo "... logging_test"
+	@echo "... hash_test"
+	@echo "... edit_cache"
+	@echo "... coding_test"
 	@echo "... bloom_test"
 	@echo "... arena_test"
-	@echo "... logging_test"
-	@echo "... table_test"
-	@echo "... filter_block_test"
-	@echo "... memenv_test"
-	@echo "... write_batch_test"
-	@echo "... skiplist_test"
-	@echo "... issue200_test"
-	@echo "... filename_test"
-	@echo "... recovery_test"
-	@echo "... version_edit_test"
-	@echo "... log_test"
-	@echo "... dbformat_test"
-	@echo "... issue178_test"
-	@echo "... env_test"
-	@echo "... db_test"
-	@echo "... corruption_test"
-	@echo "... autocompact_test"
-	@echo "... coding_test"
 	@echo "... no_destructor_test"
-	@echo "... version_set_test"
-	@echo "... issue320_test"
-	@echo "... list_install_components"
-	@echo "... hash_test"
-	@echo "... main"
+	@echo "... filter_block_test"
+	@echo "... corruption_test"
+	@echo "... env_test"
 	@echo "... status_test"
-	@echo "... fault_injection_test"
-	@echo "... c_test"
-	@echo "... install/local"
-	@echo "... crc32c_test"
-	@echo "... leveldbutil"
+	@echo "... main"
+	@echo "... issue320_test"
 	@echo "... leveldb"
+	@echo "... issue200_test"
+	@echo "... list_install_components"
+	@echo "... autocompact_test"
+	@echo "... install/strip"
+	@echo "... db_test"
+	@echo "... c_test"
+	@echo "... issue178_test"
+	@echo "... leveldbutil"
+	@echo "... test"
+	@echo "... write_batch_test"
+	@echo "... memenv_test"
+	@echo "... dbformat_test"
+	@echo "... fault_injection_test"
+	@echo "... filename_test"
+	@echo "... table_test"
+	@echo "... log_test"
+	@echo "... recovery_test"
+	@echo "... version_set_test"
+	@echo "... crc32c_test"
+	@echo "... cache_test"
+	@echo "... skiplist_test"
+	@echo "... version_edit_test"
 	@echo "... app/main.o"
 	@echo "... app/main.i"
 	@echo "... app/main.s"
 	@echo "... benchmarks/db_bench.o"
 	@echo "... benchmarks/db_bench.i"
 	@echo "... benchmarks/db_bench.s"
-	@echo "... benchmarks/db_bench_sqlite3.o"
-	@echo "... benchmarks/db_bench_sqlite3.i"
-	@echo "... benchmarks/db_bench_sqlite3.s"
 	@echo "... db/autocompact_test.o"
 	@echo "... db/autocompact_test.i"
 	@echo "... db/autocompact_test.s"

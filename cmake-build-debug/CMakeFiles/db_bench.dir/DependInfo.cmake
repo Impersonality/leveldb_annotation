@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/kg/Documents/cppCode/leveldb_annotation/benchmarks/db_bench.cc" "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/db_bench.dir/benchmarks/db_bench.cc.o"
-  "/Users/kg/Documents/cppCode/leveldb_annotation/util/histogram.cc" "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/db_bench.dir/util/histogram.cc.o"
-  "/Users/kg/Documents/cppCode/leveldb_annotation/util/testharness.cc" "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/db_bench.dir/util/testharness.cc.o"
-  "/Users/kg/Documents/cppCode/leveldb_annotation/util/testutil.cc" "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/db_bench.dir/util/testutil.cc.o"
+  "/home/kg/Code/cppCode/leveldb_annotation/benchmarks/db_bench.cc" "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/db_bench.dir/benchmarks/db_bench.cc.o"
+  "/home/kg/Code/cppCode/leveldb_annotation/util/histogram.cc" "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/db_bench.dir/util/histogram.cc.o"
+  "/home/kg/Code/cppCode/leveldb_annotation/util/testharness.cc" "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/db_bench.dir/util/testharness.cc.o"
+  "/home/kg/Code/cppCode/leveldb_annotation/util/testutil.cc" "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/db_bench.dir/util/testutil.cc.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
@@ -25,7 +25,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/kg/Documents/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/leveldb.dir/DependInfo.cmake"
+  "/home/kg/Code/cppCode/leveldb_annotation/cmake-build-debug/CMakeFiles/leveldb.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

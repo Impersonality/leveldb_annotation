@@ -12,7 +12,10 @@
 - [ ] 5.解析16中提到，level=0的sstable会有重合，level>0的不会，为什么
 
 - [ ] 6.merger.cc中，如果mem,level0,level1都有key=a，next后 key会一直是a么？
-    
+
+- [ ] 7.SequenceNumber的作用是什么？
+
+- [ ] 8.delete的流程   
 
 
 ###A

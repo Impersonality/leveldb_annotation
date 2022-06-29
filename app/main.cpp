@@ -13,13 +13,17 @@ int main() {
     return 0;
   }
 
-//  db->Put(leveldb::WriteOptions(), "ccc", "222");
+//  db->Put(leveldb::WriteOptions(), "aaa", "000");
+  string val;
+  db->Get(leveldb::ReadOptions(), "aaa", &val);
+  cout << val << endl;
+//  db->Delete(leveldb::WriteOptions(), "aaa");
 
-  auto it = db->NewIterator(leveldb::ReadOptions());
-  for (it->SeekToFirst(); it->Valid(); it->Next()) {
-    cout << it->value().ToString() << endl;
-  }
+//  auto it = db->NewIterator(leveldb::ReadOptions());
+//  for (it->SeekToFirst(); it->Valid(); it->Next()) {
+//    cout << it->key().ToString() << " " << it->value().ToString() << endl;
+//  }
+//  delete it;
 
-  delete it;
   delete db;
 }

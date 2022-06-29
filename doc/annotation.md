@@ -113,3 +113,34 @@ Iterator* NewMergingIterator(const Comparator* comparator, Iterator** children, 
     return new MergingIterator(comparator, children, n);
 }
 ```
+
+####get
+db->Get(leveldb::ReadOptions(), "hello", &val);
+
+```c++
+Status DBImpl::Get(const ReadOptions& options, const Slice& key, std::string* value) { //db_impl.cc L1128
+    // mem -> imm -> sstable 读取
+    LookupKey lkey(key, snapshot);
+    if (mem->Get(lkey, value, &s)) {
+    // Done
+    } else if (imm != nullptr && imm->Get(lkey, value, &s)) {
+    // Done
+    } else {
+        s = current->Get(options, lkey, value, &stats);
+        have_stat_update = true;
+    }
+    // 根据统计结果决定是否调度后台 Compaction
+    if (have_stat_update && current->UpdateStats(stats)) {
+        MaybeScheduleCompaction();
+    }
+}
+```
+
+```c++
+Status Version::Get(const ReadOptions& options, const LookupKey& k,
+                    std::string* value, GetStats* stats) {  // version_set.cc L326
+    // 从level0所有key<max_key && key>min_key的file,和level>0的earliest index whose largest key >= ikey找到file_id
+    // 使用table_cache.Get获取key->val
+    // 如果level0层查找过2次及以上table，返回stats，促进compaction
+}
+```

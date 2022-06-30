@@ -15,7 +15,7 @@
 
 - [ ] 7.SequenceNumber的作用是什么？
 
-- [ ] 8.delete的流程   
+- [ ] 8.每次add/update数据时sequence会增加，那么get时key+seq+type应该查不到之前的数据，实际为啥能查到呢？
 
 
 ###A

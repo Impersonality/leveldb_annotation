@@ -13,9 +13,8 @@
 
 - [ ] 6.merger.cc中，如果mem,level0,level1都有key=a，next后 key会一直是a么？
 
-- [ ] 7.SequenceNumber的作用是什么？
+- [x] 7.每次add/update数据时sequence会增加，那么get时key+seq+type应该查不到之前的数据，实际为啥能查到呢？
 
-- [ ] 8.每次add/update数据时sequence会增加，那么get时key+seq+type应该查不到之前的数据，实际为啥能查到呢？
 
 
 ###A
@@ -25,3 +24,6 @@
   设置空filter_block就是为了方便查询，这样data_block2 使用7+1作为block_offset查询时，会查到filter_block4
   
 3.memtable是skip_list，插入有序，sstable是由mem->imm->sstable，所以也是有序
+
+7.dn_impl在函数RecoverLogFile(db_impl.cc L379)创建了mem(db_impl.cc L379),comparator使用的InternalKeyComparator(dbformat.h L104),compare
+  函数在dbformat.cc L48,先按user_key排序，再按(seq<<8|type)降序排序，其实就是seq降序排序

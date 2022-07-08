@@ -87,7 +87,7 @@ class Version {
   bool RecordReadSample(Slice key);
 
   // Reference count management (so Versions do not disappear out from
-  // undeFr live iterators)
+  // under live iterators)
   void Ref();
   void Unref();
 

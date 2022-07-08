@@ -421,7 +421,8 @@ Status Version::Get(const ReadOptions& options, const LookupKey& k,
 }
 
 // 更新统计信息时，直接将记录的文件的 leveldb::FileMetaData 的 allowed_seeks 减一
-// 当 allowed_seeks <= ０时，表示读取效率很低，需要执行 Compaction，减少这条路径上的文件数量。
+// 当 allowed_seeks <= 0时，表示读取效率很低，需要执行 Compaction，减少这条路径上的文件数量。
+// 在sstable文件Get时，如果有多个sstable包含该key，对第一个sstable的FileMetaData调用UpdateStats，督促压缩
 bool Version::UpdateStats(const GetStats& stats) {
   FileMetaData* f = stats.seek_file;
   if (f != nullptr) {
@@ -435,6 +436,7 @@ bool Version::UpdateStats(const GetStats& stats) {
   return false;
 }
 
+// 类似db_impl的get，遍历所有包含该key的sstable，如果key出现多次，UpdateStats第一个sstable，督促compaction
 bool Version::RecordReadSample(Slice internal_key) {
   ParsedInternalKey ikey;
   if (!ParseInternalKey(internal_key, &ikey)) {

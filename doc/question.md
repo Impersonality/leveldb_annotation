@@ -15,6 +15,8 @@
 
 - [x] 7.每次add/update数据时sequence会增加，那么get时key+seq+type应该查不到之前的数据，实际为啥能查到呢？
 
+- [ ] 8.为什么设计version、versionSet、versionEdit
+
 
 
 ###A

@@ -919,6 +919,7 @@ Status VersionSet::Recover(bool* save_manifest) {
 
   std::string dscname = dbname_ + "/" + current;
   SequentialFile* file;
+  // 1.从current路径读取file
   s = env_->NewSequentialFile(dscname, &file);
   if (!s.ok()) {
     if (s.IsNotFound()) {
@@ -941,12 +942,14 @@ Status VersionSet::Recover(bool* save_manifest) {
   {
     LogReporter reporter;
     reporter.status = &s;
+    // 2.reader读取file
     log::Reader reader(file, &reporter, true /*checksum*/,
                        0 /*initial_offset*/);
     Slice record;
     std::string scratch;
     while (reader.ReadRecord(&record, &scratch) && s.ok()) {
       VersionEdit edit;
+      // 3.file转换成edit
       s = edit.DecodeFrom(record);
       if (s.ok()) {
         if (edit.has_comparator_ &&
@@ -958,6 +961,7 @@ Status VersionSet::Recover(bool* save_manifest) {
       }
 
       if (s.ok()) {
+        // builder apply edit -> version0 + versionEdit
         builder.Apply(&edit);
       }
 
@@ -1003,6 +1007,7 @@ Status VersionSet::Recover(bool* save_manifest) {
   }
 
   if (s.ok()) {
+    // builder.Save edit  version0 + versionEdit = version1
     Version* v = new Version(this);
     builder.SaveTo(v);
     // Install recovered version

@@ -122,6 +122,7 @@ class DBIter : public Iterator {
 inline bool DBIter::ParseKey(ParsedInternalKey* ikey) {
   Slice k = iter_->key();
 
+  // key的size越大，越容易触发RecordReadSample，督促compaction
   size_t bytes_read = k.size() + iter_->value().size();
   while (bytes_until_read_sampling_ < bytes_read) {
     bytes_until_read_sampling_ += RandomCompactionPeriod();
@@ -189,6 +190,7 @@ void DBIter::FindNextUserEntry(bool skipping, std::string* skip) {
           skipping = true;
           break;
         case kTypeValue:
+          // 如果下个key和skip(当前key)相同则continue，这是因为mergeIter中mem,imm,sstable存在同样的key
           if (skipping &&
               user_comparator_->Compare(ikey.user_key, *skip) <= 0) {
             // Entry hidden

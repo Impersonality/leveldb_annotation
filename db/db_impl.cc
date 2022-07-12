@@ -180,6 +180,7 @@ DBImpl::~DBImpl() {
   }
 }
 
+// 先生成db元信息，记录在versionEdit，然后写入manifest文件中，再将manifest文件写入current
 Status DBImpl::NewDB() {
   VersionEdit new_db;
   new_db.SetComparatorName(user_comparator()->Name());
@@ -285,6 +286,7 @@ void DBImpl::DeleteObsoleteFiles() {
   mutex_.Lock();
 }
 
+// 先从current(manifest)恢复数据，current恢复了一个version，再找到所有大于version的logNum的log，恢复并记录到versionEdit中
 Status DBImpl::Recover(VersionEdit* edit, bool* save_manifest) {
   mutex_.AssertHeld();
 
@@ -376,6 +378,7 @@ Status DBImpl::Recover(VersionEdit* edit, bool* save_manifest) {
   return Status::OK();
 }
 
+// 打开指定的log文件，写入mem，再将mem写入sstable
 Status DBImpl::RecoverLogFile(uint64_t log_number, bool last_log,
                               bool* save_manifest, VersionEdit* edit,
                               SequenceNumber* max_sequence) {
@@ -1106,6 +1109,7 @@ Iterator* DBImpl::NewInternalIterator(const ReadOptions& options,
       NewMergingIterator(&internal_comparator_, &list[0], list.size());
   versions_->current()->Ref();
 
+  // Iterator类在析构时会调用RegisterCleanup
   IterState* cleanup = new IterState(&mutex_, mem_, imm_, versions_->current());
   internal_iter->RegisterCleanup(CleanupIteratorState, cleanup, nullptr);
 

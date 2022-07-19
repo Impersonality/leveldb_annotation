@@ -7,15 +7,15 @@
 
 - [x] 3.leveldb如何保持插入时的有序呢，memtable是skip_list，插入有序，sstable如何保持顺序呢
 
-- [ ] 4.如果mem未满，还未写入sstable时，leveldb重启了，重启后如何恢复的mem
+- [x] 4.如果mem未满，还未写入sstable时，leveldb重启了，重启后如何恢复的mem
 
 - [ ] 5.解析16中提到，level=0的sstable会有重合，level>0的不会，为什么
 
-- [ ] 6.merger.cc中，如果mem,level0,level1都有key=a，next后 key会一直是a么？
+- [x] 6.merger.cc中，如果mem,level0,level1都有key=a，next后 key会一直是a么？
 
 - [x] 7.每次add/update数据时sequence会增加，那么get时key+seq+type应该查不到之前的数据，实际为啥能查到呢？
 
-- [ ] 8.为什么设计version、versionSet、versionEdit
+- [x] 8.为什么设计version、versionSet、versionEdit
 
 
 
@@ -27,5 +27,14 @@
   
 3.memtable是skip_list，插入有序，sstable是由mem->imm->sstable，所以也是有序
 
+4.插入（修改/删除都是插入）数据时先写入了log，数据库都采用了wal方式，recovery会恢复log
+
+5.因为level=0的sstable是由mem->imm->sst直接写入，而level>0的sstable都是compaction生成，要么从level=0和上层sstable合并，要么从imm直接写入，但
+  都做了处理，不会重复。sstable的范围重复会影响leveldb读效率，leveldb在很多细节做了处理，尽量减少sstable的范围重复
+
+6.不会，dbiter做了处理，会跳过重复的key
+
 7.dn_impl在函数RecoverLogFile(db_impl.cc L379)创建了mem(db_impl.cc L379),comparator使用的InternalKeyComparator(dbformat.h L104),compare
   函数在dbformat.cc L48,先按user_key排序，再按(seq<<8|type)降序排序，其实就是seq降序排序
+  
+8.version是服务于compaction，version0+versionEdit=version1，versionEdit记录了addFile、delFile、compactionPoint。所以这三个是为了compaction所设计

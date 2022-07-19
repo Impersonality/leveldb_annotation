@@ -2,7 +2,7 @@
 db->Put(leveldb::WriteOptions(), "aaa", "000"); // app/main.cpp line11
 
 ```c++
-Status DB::Put(const WriteOptions& opt, const Slice& key, const Slice& value) { // db_impl.cc line1532
+Status DB::Put(const WriteOptions& opt, const Slice& key, const Slice& value) { // db_impl.cc line1536
     WriteBatch batch; //leveldb中不管单个插入还是多个插入都是以WriteBatch的方式进行的
     batch.Put(key, value);
     return Write(opt, &batch);

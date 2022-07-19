@@ -422,7 +422,7 @@ Status Version::Get(const ReadOptions& options, const LookupKey& k,
 
 // 更新统计信息时，直接将记录的文件的 leveldb::FileMetaData 的 allowed_seeks 减一
 // 当 allowed_seeks <= 0时，表示读取效率很低，需要执行 Compaction，减少这条路径上的文件数量。
-// 在sstable文件Get时，如果有多个sstable包含该key，对第一个sstable的FileMetaData调用UpdateStats，督促压缩
+// 在sstable文件Get时，如果有多个sstable的范围包含该key，对第一个sstable的FileMetaData调用UpdateStats，督促压缩
 bool Version::UpdateStats(const GetStats& stats) {
   FileMetaData* f = stats.seek_file;
   if (f != nullptr) {
@@ -1433,7 +1433,7 @@ void VersionSet::SetupOtherInputs(Compaction* c) {
   // 计算出level n参与Compact的文件列表的所有sst文件的总和key范围的begin和end；
   GetRange(c->inputs_[0], &smallest, &largest);
 
-  // 根据重新计算出来的begin和end，去获取根level n+1有重叠的sst文件列表，存入inputs_[1]。
+  // 根据重新计算出来的begin和end，去获取跟level n+1有重叠的sst文件列表，存入inputs_[1]。
   current_->GetOverlappingInputs(level + 1, &smallest, &largest,
                                  &c->inputs_[1]);
 

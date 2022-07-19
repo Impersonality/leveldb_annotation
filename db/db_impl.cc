@@ -735,7 +735,8 @@ void DBImpl::BackgroundCompaction() {
   if (c == nullptr) {
     // Nothing to do
   } else if (!is_manual && c->IsTrivialMove()) {
-    // // trivial compaction，直接将当前level上需要compaction的sst移动到下一层，不需要进行合并操作.
+    //  trivial compaction，直接将当前level上需要compaction的sst移动到下一层，不需要进行合并操作.
+    // sst原本就存在于磁盘，无需再删除写入，更改level即可
     // Move file to next level
     assert(c->num_input_files(0) == 1);
     FileMetaData* f = c->input(0, 0);
@@ -948,6 +949,7 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
       imm_micros += (env_->NowMicros() - imm_start);
     }
 
+    // ShouldStopBefore判断是否结束当前输出文件（level n+2 和 level n+1 的重叠太多），填充文件尾部，完成一个sstable的创建
     Slice key = input->key();
     if (compact->compaction->ShouldStopBefore(key) &&
         compact->builder != nullptr) {

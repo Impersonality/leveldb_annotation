@@ -122,7 +122,7 @@ class DBIter : public Iterator {
 inline bool DBIter::ParseKey(ParsedInternalKey* ikey) {
   Slice k = iter_->key();
 
-  // key的size越大，越容易触发RecordReadSample，督促compaction
+  // key value的size越大，越容易触发RecordReadSample，督促compaction
   size_t bytes_read = k.size() + iter_->value().size();
   while (bytes_until_read_sampling_ < bytes_read) {
     bytes_until_read_sampling_ += RandomCompactionPeriod();
